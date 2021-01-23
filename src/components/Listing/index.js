@@ -1,18 +1,20 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image } from 'react-native'
 
-export default function Listing() {
+export default function Listing({listing}) {
+
+    console.log(listing)
     return (
         <View style={styles.container}>
         <Image style={styles.image} source={{ uri: 'https://www.apartments.com/images/default-source/default-album/apartment-kitchen.tmb-featuredim.jpg?sfvrsn=17473757_0'}} />
-            <Text style={styles.bedrooms}>1 bed 1 bedroom</Text>
-            <Text numberOfLines={2} style={styles.description}>dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</Text>
+            <Text style={styles.bedrooms}>{listing.bed} bath {listing.bedroom} bedroom</Text>
+            <Text numberOfLines={2} style={styles.description}>{listing.type} {listing.title}</Text>
             <Text style={styles.prices}>
-                <Text style={styles.oldPrice}>36$ </Text>
-                <Text style={styles.newPrice}> $30 </Text>
+                <Text style={styles.oldPrice}>{listing.oldPrice}$ </Text>
+                <Text style={styles.newPrice}> ${listing.newPrice} </Text>
                  / night
             </Text>
-                <Text style={styles.totalPrice}>230$ total</Text>
+                <Text style={styles.totalPrice}>{listing.totalPrice}$ total</Text>
         </View>
     )
 }

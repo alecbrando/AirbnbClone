@@ -13,13 +13,16 @@ import {
 } from 'react-native';
 import HomeScreen from './src/screens/Home/index';
 import Listing from './src/components/Listing/index';
+import feed from './assets/data/feed';
 
-const App: () => React$Node = () => {
+const post1 = feed[0]
+
+export default function App() {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <Listing/>
+      <StatusBar barStyle="dark-content" />
+        <Listing listing={post1}/>
       </SafeAreaView>
     </>
   );
@@ -27,4 +30,3 @@ const App: () => React$Node = () => {
 
 
 
-export default App;
