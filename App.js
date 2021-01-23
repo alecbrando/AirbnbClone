@@ -16,15 +16,16 @@ import Listing from './src/components/Listing/index';
 import feed from './assets/data/feed';
 // import SearchResultScreen from './src/screens/SearchResults/index';
 
-import DestinationScreen from './src/screens/DestinationScreen/index';
-const post1 = feed[0]
+// import DestinationScreen from './src/screens/DestinationScreen/index';
+import GuestDetailScreen from './src/screens/GuestsDetailScreen/index';
+
 
 export default function App() {
   return (
     <>
       <SafeAreaView>
       <StatusBar barStyle="dark-content" />
-      <DestinationScreen />
+      <GuestDetailScreen />
       </SafeAreaView>
     </>
   );
