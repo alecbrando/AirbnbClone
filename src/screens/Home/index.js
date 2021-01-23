@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         position: 'absolute',
         zIndex: 100,
-        top: 20,
+        top: 50,
         marginHorizontal: 10,
         borderRadius: 30,
         height: 50
