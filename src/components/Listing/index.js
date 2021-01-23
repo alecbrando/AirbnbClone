@@ -6,7 +6,7 @@ export default function Listing({listing}) {
     console.log(listing)
     return (
         <View style={styles.container}>
-        <Image style={styles.image} source={{ uri: 'https://www.apartments.com/images/default-source/default-album/apartment-kitchen.tmb-featuredim.jpg?sfvrsn=17473757_0'}} />
+        <Image style={styles.image} source={{ uri: listing.image}} />
             <Text style={styles.bedrooms}>{listing.bed} bath {listing.bedroom} bedroom</Text>
             <Text numberOfLines={2} style={styles.description}>{listing.type} {listing.title}</Text>
             <Text style={styles.prices}>
