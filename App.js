@@ -11,13 +11,10 @@ import {
   SafeAreaView,
   StatusBar,
 } from 'react-native';
-import HomeScreen from './src/screens/Home/index';
-import Listing from './src/components/Listing/index';
-import feed from './assets/data/feed';
-// import SearchResultScreen from './src/screens/SearchResults/index';
 
-// import DestinationScreen from './src/screens/DestinationScreen/index';
-import GuestDetailScreen from './src/screens/GuestsDetailScreen/index';
+import GuestScreen from './src/screens/GuestScreen/index';
+
+
 
 
 export default function App() {
@@ -25,7 +22,7 @@ export default function App() {
     <>
       <SafeAreaView>
       <StatusBar barStyle="dark-content" />
-      <GuestDetailScreen />
+      <GuestScreen />
       </SafeAreaView>
     </>
   );

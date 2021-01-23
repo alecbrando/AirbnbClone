@@ -1,15 +1,20 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { View, Text, StyleSheet, Pressable, Dimensions } from 'react-native'
 
 
 
-export default function GuestDetailScreen() {
+export default function GuestDetailScreen(props) {
     const [count, setCount] = useState(0)
+
+    useEffect(() => {
+        props.setter(count)
+    }, [count])
+
     return (
         <View style={styles.row}>
             <View style={styles.leftSide}>
-                <Text style={styles.topText}>Adults</Text>
-                <Text style={styles.ageText}>Ages 13 or above</Text>
+                <Text style={styles.topText}>{props.type}</Text>
+                <Text style={styles.ageText}>{props.age}</Text>
             </View>
             <View style={styles.innerRow}>
                 <Pressable onPress={() => setCount(count === 0 ? count : count - 1)} style={styles.minus}>
@@ -26,7 +31,6 @@ export default function GuestDetailScreen() {
 
 const styles = StyleSheet.create({
     row: {
-        marginTop: 30,
         flexDirection: 'row',
         width: Dimensions.get('screen').width - 20,
         justifyContent: 'space-between',
